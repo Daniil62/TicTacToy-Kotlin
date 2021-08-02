@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Крестики-Нолики</string>
+    <string name="selector">Оппонент: Человек/Андроид</string>
+    <string name="queueSelector">Первый ход: Игрок/Андроид</string>
+    <string name="field_size_variant">Размер: 3x3 / 5x5</string>
+    <string name="alternation">Авточередование</string>
+    <string name="ok">OK</string>
+    <string name="player1">Игрок 1</string>
+    <string name="player2">Игрок 2</string>
+    <string name="restart">Рестарт</string>
+    <string name="reset_count">Сбросить счет</string>
+    <string name="x">X</string>
+    <string name="o">O</string>
+</resources>

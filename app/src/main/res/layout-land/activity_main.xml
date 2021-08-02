@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/opponentSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/selector"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/queueSelector"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp,UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/queueSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/queueSelector"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp,UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/field_size_selector_Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/field_size_variant"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alternation_switch"
+        tools:ignore="SmallSp,UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/alternation_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/alternation"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp,UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/x"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTransparentBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/player1_count_textView"
+        app:layout_constraintEnd_toEndOf="@+id/player1_name_textView"
+        app:layout_constraintStart_toStartOf="@+id/player1_name_textView"
+        app:layout_constraintTop_toTopOf="@+id/player1_name_textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/o"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTransparentBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/player2_count_textView"
+        app:layout_constraintEnd_toEndOf="@+id/player2_name_textView"
+        app:layout_constraintStart_toStartOf="@+id/player2_name_textView"
+        app:layout_constraintTop_toTopOf="@+id/player2_name_textView" />
+
+    <TextView
+        android:id="@+id/player1_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/player1"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_size_selector_Switch" />
+
+    <TextView
+        android:id="@+id/player2_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player2"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recycler"
+        app:layout_constraintTop_toTopOf="@+id/player1_name_textView" />
+
+    <TextView
+        android:id="@+id/player1_count_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/player1_name_textView"
+        app:layout_constraintStart_toStartOf="@+id/player1_name_textView"
+        app:layout_constraintTop_toBottomOf="@+id/player1_name_textView" />
+
+    <TextView
+        android:id="@+id/player2_count_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/player2_name_textView"
+        app:layout_constraintStart_toStartOf="@+id/player2_name_textView"
+        app:layout_constraintTop_toBottomOf="@+id/player2_name_textView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/queueSelector">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/reset_count_button_header_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_count"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/reset_count_button_imageView"
+        app:layout_constraintStart_toStartOf="@+id/reset_count_button_imageView"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:id="@+id/reset_count_button_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/stat_notify_sync"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/restart_button_header_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restart"
+        android:textColor="@color/colorGhostWhite"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/restart_button_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/restart_button_imageView"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:id="@+id/restart_button_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/stat_notify_sync"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
